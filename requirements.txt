@@ -1,0 +1,6 @@
+flwr==0.16.0
+torch==1.8.1
+numpy==1.20.2
+torchvision==0.9.1
+opacus==0.14.0
+tqdm==4.62.1
