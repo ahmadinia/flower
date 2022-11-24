@@ -1,5 +1,19 @@
 # Flower and Opacus example
 
+
+# For run docker
+Go to this directory and enter this command:
+
+```shell
+docker build -t flower:latest .
+```
+
+after build your docker, run with this command:
+
+```shell
+    docker run --name flower -d --network=host flower:latest
+```
+
 This is an introductory example to Flower and Opacus with scaling on GPU using PyTorch, it is an adaptation of the "[Flower Example using PyTorch](https://flower.dev/docs/quickstart_pytorch.html)" example and provides some insights on how to perform DP-SGD in federated settings and scale Flower to hundreds of clients using GPU. For more information regarding the GPU issue for now with Flower you can check out my [other repository](https://github.com/matturche/flower_scaling_example). DP-SGD is pretty easy to implement on vanilla models but when for federated models we have to keep track of the privacy budget among every clients. This repository proposes one way to compute the privacy budget accross rounds. 
 
 ## Project Setup
